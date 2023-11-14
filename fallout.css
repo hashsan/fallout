@@ -1,0 +1,93 @@
+/* exsample dom
+<div class="fallout">
+    <div class="box left">
+      <div class="wrap line"></div>
+    </div>
+    <div class="box right">
+      <div class="wrap line" contenteditable="plaintext-only">＃</div>
+    </div>  
+</div>
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color:transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #9ff3;
+}
+::selection {
+  color: #000;
+  background: #9ff;
+}
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  font-family: 'M PLUS Rounded 1c' ,monospace;
+  /*font-size: 22px;*/
+  font-size:16px;
+  line-height:1.6;
+  
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fallout {
+  position: relative;
+  padding: 25px;
+  width: 90vw;
+  height: 90vh;
+  background: #132; /******/
+  overflow: hidden;
+  border-radius: 25px;
+  color: #9ff;
+  box-shadow: inset 0 0 15px 13px rgba(0,0,0,0.45);
+  box-sizing: border-box;
+}
+
+
+.fallout{
+  background: linear-gradient(0deg,#1327,#1327),
+    var(--background-2);
+  background-size: 100% 100%,auto 100%;
+  display:flex;
+}
+
+:root{
+  --background-2:url('https://i.pinimg.com/564x/67/42/e6/6742e679764c6ca4c837e43a0bccfe57.jpg');
+}
+
+
+.fallout .box{
+  position: relative;
+  z-index: 2;
+  height:100%;
+  min-height:100%;
+  overflow-y:scroll;
+  width:100%;
+}
+
+.fallout img{
+  height:300px;
+  filter:grayscale(0.7);
+}
+
+
+.fallout [contenteditable]{
+  outline:none;
+  padding-bottom:30vh;
+}
+
+/*---------------------------------*/
+
